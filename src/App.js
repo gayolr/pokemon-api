@@ -19,7 +19,6 @@ function App() {
          const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
          const result = await axios(url);
          savePokemon(result.data);
-         console.log(result.data);
       };
       apiPokemon();
    }, [searchPokemon]);

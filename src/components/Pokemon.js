@@ -5,8 +5,14 @@ const Pokemon = ({ pokemon }) => {
 
    const resultInfo = e => {
       e.preventDefault();
-      console.log(e.target);
-      localStorage.setItem('favorites', e.target)
+      let data = [{
+         pokemonName: e.target[0].value,
+         pokemonWeight: e.target[1].value,
+         pokemonOrder: e.target[2].value,
+         pokemonId: e.target[3].value,
+      }];
+
+      localStorage.setItem('favorites', JSON.stringify(data));
    };
 
    return (
